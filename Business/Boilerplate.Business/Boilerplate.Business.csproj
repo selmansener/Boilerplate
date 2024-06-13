@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DynamicQueryBuilder" Version="1.0.5" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataAccess\InvoiceFetcher.DataAccess\Boilerplate.DataAccess.csproj" />
+    <ProjectReference Include="..\..\Domains\InvoiceFetcher.Domains\Boilerplate.Domains.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\EventBus\InvoiceFetcher.Infrastructure.EventBusRabbitMQ\Boilerplate.Infrastructure.EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\InvoiceFetcher.Shared\Boilerplate.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

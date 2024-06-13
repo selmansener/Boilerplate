@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Microsoft.EntityFrameworkCore;
+
+namespace InvoiceFetcher.DataAccess.Development
+{
+    public interface IMigrationContext
+    {
+        Task EnsureCreated();
+
+        Task Migrate();
+
+        Task<IEnumerable<string>> GetPendingMigrations();
+    }
+
+    internal class MigrationContext : IMigrationContext
+    {
+        private readonly InvoiceFetcherDbContext _context;
+
+        public MigrationContext(InvoiceFetcherDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task EnsureCreated()
+        {
+            var created = await _context.Database.EnsureCreatedAsync();
+
+            if (!created)
+            {
+                throw new InvalidOperationException("Database must be empty or not exists to create.");
+            }
+        }
+
+        public async Task Migrate()
+        {
+            await _context.Database.MigrateAsync();
+        }
+
+        public async Task<IEnumerable<string>> GetPendingMigrations()
+        {
+            return await _context.Database.GetPendingMigrationsAsync();
+        }
+    }
+}
