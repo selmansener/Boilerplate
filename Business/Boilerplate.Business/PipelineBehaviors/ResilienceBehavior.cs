@@ -3,7 +3,7 @@
 using Polly.Retry;
 using Polly;
 
-namespace InvoiceFetcher.Business.PipelineBehaviors
+namespace Boilerplate.Business.PipelineBehaviors
 {
     // TODO: Farklı Resilience stratejilerine göre farklı behaviorlar yazmak gerekebilir.
     internal class ResilienceBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>

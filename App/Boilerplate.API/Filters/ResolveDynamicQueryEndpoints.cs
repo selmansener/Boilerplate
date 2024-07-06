@@ -2,12 +2,12 @@
 
 using DynamicQueryBuilder;
 
-using InvoiceFetcher.API.Attributes;
+using Boilerplate.API.Attributes;
 
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace InvoiceFetcher.API.Filters
+namespace Boilerplate.API.Filters
 {
     internal sealed class ResolveDynamicQueryEndpoints : IOperationFilter
     {

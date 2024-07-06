@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["InvoiceFetcher.API/InvoiceFetcher.API.csproj", "InvoiceFetcher.API/"]
-RUN dotnet restore "InvoiceFetcher.API/InvoiceFetcher.API.csproj"
+COPY ["Boilerplate.API/Boilerplate.API.csproj", "Boilerplate.API/"]
+RUN dotnet restore "Boilerplate.API/Boilerplate.API.csproj"
 COPY . .
-WORKDIR "/src/InvoiceFetcher.API"
-RUN dotnet build "InvoiceFetcher.API.csproj" -c Release -o /app/build
+WORKDIR "/src/Boilerplate.API"
+RUN dotnet build "Boilerplate.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "InvoiceFetcher.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "Boilerplate.API.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "InvoiceFetcher.API.dll"]
+ENTRYPOINT ["dotnet", "Boilerplate.API.dll"]

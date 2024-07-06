@@ -6,7 +6,7 @@ using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace InvoiceFetcher.API.Middlewares
+namespace Boilerplate.API.Middlewares
 {
     public class EnvironmentControlMiddleware
     {

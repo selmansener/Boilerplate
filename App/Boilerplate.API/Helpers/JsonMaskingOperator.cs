@@ -1,10 +1,10 @@
-﻿using InvoiceFetcher.Infrastructure.Utils;
+﻿using Boilerplate.Infrastructure.Utils;
 using Newtonsoft.Json;
 
 using Serilog;
 using Serilog.Enrichers.Sensitive;
 
-namespace InvoiceFetcher.API.Helpers
+namespace Boilerplate.API.Helpers
 {
     internal class JsonMaskingOperator : IMaskingOperator
     {

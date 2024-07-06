@@ -1,7 +1,7 @@
 ﻿using RabbitMQ.Client;
 using System;
 
-namespace InvoiceFetcher.Infrastructure.EventBusRabbitMQ
+namespace Boilerplate.Infrastructure.EventBusRabbitMQ
 {
     public interface IRabbitMQPersistentConnection
         : IDisposable

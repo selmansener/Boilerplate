@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-using InvoiceFetcher.Shared.Exceptions;
+using Boilerplate.Shared.Exceptions;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using System.Collections;
 using System.Net;
 
-namespace InvoiceFetcher.API.Middlewares
+namespace Boilerplate.API.Middlewares
 {
     public class ExceptionHandlerMiddleware
     {

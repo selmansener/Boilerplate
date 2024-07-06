@@ -1,14 +1,14 @@
 ﻿using FluentValidation;
 
-using InvoiceFetcher.DataAccess.Repositories;
-using InvoiceFetcher.Domains.InvoiceDomain;
-using InvoiceFetcher.Shared.Exceptions;
+using Boilerplate.DataAccess.Repositories;
+using Boilerplate.Domains.InvoiceDomain;
+using Boilerplate.Shared.Exceptions;
 
 using MediatR;
 
 using Newtonsoft.Json;
 
-namespace InvoiceFetcher.Business.CQRS.InvoiceDomain.Commands
+namespace Boilerplate.Business.CQRS.InvoiceDomain.Commands
 {
     public class UpdateInvoiceCommand : IRequest<Unit>
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InvoiceFetcher.Shared.Exceptions
+namespace Boilerplate.Shared.Exceptions
 {
     public class ConflictException : Exception
     {

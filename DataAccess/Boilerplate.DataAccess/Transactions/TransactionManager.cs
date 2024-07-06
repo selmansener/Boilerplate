@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace InvoiceFetcher.DataAccess.Transactions
+namespace Boilerplate.DataAccess.Transactions
 {
     public interface ITransactionManager : IDisposable
     {
@@ -19,10 +19,10 @@ namespace InvoiceFetcher.DataAccess.Transactions
 
     internal class TransactionManager : ITransactionManager
     {
-        private readonly InvoiceFetcherDbContext _dbContext;
+        private readonly BoilerplateDbContext _dbContext;
         private IDbContextTransaction _dbTransaction;
 
-        public TransactionManager(InvoiceFetcherDbContext dbContext)
+        public TransactionManager(BoilerplateDbContext dbContext)
         {
             _dbContext = dbContext;
         }

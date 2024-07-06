@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Prometheus;
 
-namespace InvoiceFetcher.API.HealthCheck
+namespace Boilerplate.API.HealthCheck
 {
     internal static class HealthCheckBuilderExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InvoiceFetcher.Infrastructure.EventBus
+namespace Boilerplate.Infrastructure.EventBus
 {
     public class SubscriptionInfo
     {

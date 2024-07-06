@@ -2,8 +2,8 @@
 
 using DynamicQueryBuilder.Models;
 
-using InvoiceFetcher.Business.CQRS.InvoiceDomain.Commands;
-using InvoiceFetcher.Business.PipelineBehaviors;
+using Boilerplate.Business.CQRS.InvoiceDomain.Commands;
+using Boilerplate.Business.PipelineBehaviors;
 
 using Mapster;
 
@@ -11,7 +11,7 @@ using MediatR;
 
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceFetcher.Business.Extensions
+namespace Boilerplate.Business.Extensions
 {
     public static class ServiceCollectionExtensions
     {

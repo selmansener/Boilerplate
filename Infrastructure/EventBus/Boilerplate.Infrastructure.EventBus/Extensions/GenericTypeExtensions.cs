@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace InvoiceFetcher.Infrastructure.EventBus.Extensions;
+namespace Boilerplate.Infrastructure.EventBus.Extensions;
 
 public static class GenericTypeExtensions
 {

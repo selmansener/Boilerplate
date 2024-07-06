@@ -1,8 +1,8 @@
-﻿using InvoiceFetcher.DataAccess.Development;
+﻿using Boilerplate.DataAccess.Development;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace InvoiceFetcher.API.Areas.Dev.Controllers
+namespace Boilerplate.API.Areas.Dev.Controllers
 {
     public class DbContextController : DevAPIBaseController
     {

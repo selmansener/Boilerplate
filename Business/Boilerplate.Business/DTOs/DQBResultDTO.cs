@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InvoiceFetcher.Business.DTOs
+namespace Boilerplate.Business.DTOs
 {
     public class DQBResultDTO<T>
     {

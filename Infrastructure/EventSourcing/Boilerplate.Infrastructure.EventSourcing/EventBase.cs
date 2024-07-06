@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace InvoiceFetcher.Infrastructure.EventSourcing
+namespace Boilerplate.Infrastructure.EventSourcing
 {
     public class EventBase
     {

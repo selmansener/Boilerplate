@@ -2,11 +2,11 @@
 
 using FluentValidation;
 
-using InvoiceFetcher.Business.Events;
-using InvoiceFetcher.DataAccess.Repositories;
-using InvoiceFetcher.Domains.InvoiceDomain;
-using InvoiceFetcher.Infrastructure.EventBus.Abstractions;
-using InvoiceFetcher.Shared.Exceptions;
+using Boilerplate.Business.Events;
+using Boilerplate.DataAccess.Repositories;
+using Boilerplate.Domains.InvoiceDomain;
+using Boilerplate.Infrastructure.EventBus.Abstractions;
+using Boilerplate.Shared.Exceptions;
 
 using Mapster;
 
@@ -14,7 +14,7 @@ using MediatR;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceFetcher.Business.CQRS.InvoiceDomain.Commands
+namespace Boilerplate.Business.CQRS.InvoiceDomain.Commands
 {
     public class CreateInvoiceCommand : IRequest<Unit>
     {

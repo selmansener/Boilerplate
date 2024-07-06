@@ -1,4 +1,4 @@
-﻿namespace InvoiceFetcher.Shared.Exceptions
+﻿namespace Boilerplate.Shared.Exceptions
 {
     public class NotFoundException : Exception
     {

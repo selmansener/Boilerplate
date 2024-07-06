@@ -1,8 +1,8 @@
-﻿using InvoiceFetcher.Domains.AccountDomain;
+﻿using Boilerplate.Domains.AccountDomain;
 
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace InvoiceFetcher.DataAccess.EntityConfigurations.AccountDomain
+namespace Boilerplate.DataAccess.EntityConfigurations.AccountDomain
 {
     internal class AccountEntityConfig : BaseEntityConfiguration<Account>
     {

@@ -1,6 +1,6 @@
-﻿using InvoiceFetcher.Domains.DocumentDomain;
+﻿using Boilerplate.Domains.DocumentDomain;
 
-namespace InvoiceFetcher.DataAccess.EntityConfigurations.DocumentDomain
+namespace Boilerplate.DataAccess.EntityConfigurations.DocumentDomain
 {
     internal class DocumentEntityConfig : BaseEntityConfiguration<Document>
     {

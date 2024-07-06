@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using InvoiceFetcher.Domains.Base;
+using Boilerplate.Domains.Base;
 
-namespace InvoiceFetcher.DataAccess.EntityConfigurations
+namespace Boilerplate.DataAccess.EntityConfigurations
 {
     internal abstract class BaseEntityConfiguration<T> : IEntityTypeConfiguration<T>
         where T : BaseEntity

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 using FluentValidation;
 
-using InvoiceFetcher.Business.CQRS.InvoiceDomain.DTOs;
-using InvoiceFetcher.DataAccess.Repositories;
-using InvoiceFetcher.Domains.InvoiceDomain;
-using InvoiceFetcher.Shared.Exceptions;
+using Boilerplate.Business.CQRS.InvoiceDomain.DTOs;
+using Boilerplate.DataAccess.Repositories;
+using Boilerplate.Domains.InvoiceDomain;
+using Boilerplate.Shared.Exceptions;
 
 using Mapster;
 
@@ -17,7 +17,7 @@ using MediatR;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceFetcher.Business.CQRS.InvoiceDomain.Queries
+namespace Boilerplate.Business.CQRS.InvoiceDomain.Queries
 {
     public class GetInvoiceById : IRequest<InvoiceDTO>
     {

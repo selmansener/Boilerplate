@@ -4,24 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using InvoiceFetcher.Infrastructure.EventSourcing;
-using InvoiceFetcher.Shared.Interfaces;
+using Boilerplate.Infrastructure.EventSourcing;
+using Boilerplate.Shared.Interfaces;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceFetcher.DataAccess
+namespace Boilerplate.DataAccess
 {
-    internal class InvoiceFetcherDbContextFactory : IDbContextFactory<InvoiceFetcherDbContext>
+    internal class BoilerplateDbContextFactory : IDbContextFactory<BoilerplateDbContext>
     {
         private const int DefaultTenantId = -1;
 
-        private readonly IDbContextFactory<InvoiceFetcherDbContext> _pooledFactory;
+        private readonly IDbContextFactory<BoilerplateDbContext> _pooledFactory;
         private readonly int _tenantId;
         private readonly EventCollection _eventCollection;
         private readonly IEventSourceContext _eventSourceContext;
 
-        public InvoiceFetcherDbContextFactory(
-            IDbContextFactory<InvoiceFetcherDbContext> pooledFactory,
+        public BoilerplateDbContextFactory(
+            IDbContextFactory<BoilerplateDbContext> pooledFactory,
             ITenant tenant,
             EventCollection eventCollection,
             IEventSourceContext eventSourceContext)
@@ -32,7 +32,7 @@ namespace InvoiceFetcher.DataAccess
             _eventSourceContext = eventSourceContext;
         }
 
-        public InvoiceFetcherDbContext CreateDbContext()
+        public BoilerplateDbContext CreateDbContext()
         {
             var context = _pooledFactory.CreateDbContext();
             context.TenantId = _tenantId;

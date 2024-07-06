@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 using Newtonsoft.Json;
 
-namespace InvoiceFetcher.API.Areas.API.Controllers
+namespace Boilerplate.API.Areas.API.Controllers
 {
     public class MainController : APIBaseController
     {

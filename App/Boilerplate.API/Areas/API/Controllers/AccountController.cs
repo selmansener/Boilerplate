@@ -1,10 +1,10 @@
-﻿using InvoiceFetcher.Business.CQRS.AccountDomain.Commands;
+﻿using Boilerplate.Business.CQRS.AccountDomain.Commands;
 
 using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace InvoiceFetcher.API.Areas.API.Controllers
+namespace Boilerplate.API.Areas.API.Controllers
 {
     public class AccountController : APIBaseController
     {

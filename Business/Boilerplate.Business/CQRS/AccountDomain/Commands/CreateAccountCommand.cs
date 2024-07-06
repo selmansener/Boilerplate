@@ -1,14 +1,14 @@
 ﻿using FluentValidation;
 
-using InvoiceFetcher.Business.CQRS.AccountDomain.DTOs;
-using InvoiceFetcher.DataAccess.Repositories;
-using InvoiceFetcher.Domains.AccountDomain;
+using Boilerplate.Business.CQRS.AccountDomain.DTOs;
+using Boilerplate.DataAccess.Repositories;
+using Boilerplate.Domains.AccountDomain;
 
 using Mapster;
 
 using MediatR;
 
-namespace InvoiceFetcher.Business.CQRS.AccountDomain.Commands
+namespace Boilerplate.Business.CQRS.AccountDomain.Commands
 {
     public class CreateAccountCommand : IRequest<Unit>
     {

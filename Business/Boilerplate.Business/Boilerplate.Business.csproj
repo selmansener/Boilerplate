@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -13,10 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DataAccess\InvoiceFetcher.DataAccess\Boilerplate.DataAccess.csproj" />
-    <ProjectReference Include="..\..\Domains\InvoiceFetcher.Domains\Boilerplate.Domains.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\EventBus\InvoiceFetcher.Infrastructure.EventBusRabbitMQ\Boilerplate.Infrastructure.EventBusRabbitMQ.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\InvoiceFetcher.Shared\Boilerplate.Shared.csproj" />
+    <ProjectReference Include="..\..\DataAccess\Boilerplate.DataAccess\Boilerplate.DataAccess.csproj" />
+    <ProjectReference Include="..\..\Domains\Boilerplate.Domains\Boilerplate.Domains.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\EventBus\Boilerplate.Infrastructure.EventBusRabbitMQ\Boilerplate.Infrastructure.EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Boilerplate.Shared\Boilerplate.Shared.csproj" />
   </ItemGroup>
 
 </Project>

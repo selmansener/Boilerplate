@@ -8,7 +8,7 @@ using System;
 using System.IO;
 using System.Net.Sockets;
 
-namespace InvoiceFetcher.Infrastructure.EventBusRabbitMQ
+namespace Boilerplate.Infrastructure.EventBusRabbitMQ
 {
     public class DefaultRabbitMQPersistentConnection
         : IRabbitMQPersistentConnection

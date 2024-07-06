@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InvoiceFetcher.Shared.Enums
+namespace Boilerplate.Shared.Enums
 {
     public enum DocumentType
     {

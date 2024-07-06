@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using FluentValidation;
 
-namespace InvoiceFetcher.Business.CQRS.AccountDomain.DTOs
+namespace Boilerplate.Business.CQRS.AccountDomain.DTOs
 {
     public class AccountIdentityInfoDTO
     {

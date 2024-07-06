@@ -1,9 +1,9 @@
-﻿using InvoiceFetcher.Infrastructure.EventBus.Abstractions;
-using InvoiceFetcher.Infrastructure.EventBus.Events;
+﻿using Boilerplate.Infrastructure.EventBus.Abstractions;
+using Boilerplate.Infrastructure.EventBus.Events;
 using System;
 using System.Collections.Generic;
 
-namespace InvoiceFetcher.Infrastructure.EventBus
+namespace Boilerplate.Infrastructure.EventBus
 {
     public interface IEventBusSubscriptionsManager
     {

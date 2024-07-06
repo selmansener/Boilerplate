@@ -1,8 +1,8 @@
-﻿using InvoiceFetcher.Domains.Base;
-using InvoiceFetcher.Domains.DocumentDomain;
-using InvoiceFetcher.Shared.Enums;
+﻿using Boilerplate.Domains.Base;
+using Boilerplate.Domains.DocumentDomain;
+using Boilerplate.Shared.Enums;
 
-namespace InvoiceFetcher.Domains.InvoiceDomain
+namespace Boilerplate.Domains.InvoiceDomain
 {
     public class Invoice : BaseEntity
     {

@@ -1,6 +1,6 @@
-﻿using InvoiceFetcher.Domains.Base;
+﻿using Boilerplate.Domains.Base;
 
-namespace InvoiceFetcher.Domains.AccountDomain
+namespace Boilerplate.Domains.AccountDomain
 {
     public class Account : BaseEntity
     {

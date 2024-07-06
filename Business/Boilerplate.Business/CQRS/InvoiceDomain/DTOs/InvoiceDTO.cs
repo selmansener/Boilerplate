@@ -1,4 +1,4 @@
-﻿namespace InvoiceFetcher.Business.CQRS.InvoiceDomain.DTOs
+﻿namespace Boilerplate.Business.CQRS.InvoiceDomain.DTOs
 {
     public class InvoiceDTO
     {

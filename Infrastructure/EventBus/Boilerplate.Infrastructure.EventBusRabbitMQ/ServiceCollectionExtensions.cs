@@ -1,12 +1,12 @@
-﻿using InvoiceFetcher.Infrastructure.EventBus.Abstractions;
-using InvoiceFetcher.Infrastructure.EventBus;
+﻿using Boilerplate.Infrastructure.EventBus.Abstractions;
+using Boilerplate.Infrastructure.EventBus;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 using RabbitMQ.Client;
 
-namespace InvoiceFetcher.Infrastructure.EventBusRabbitMQ
+namespace Boilerplate.Infrastructure.EventBusRabbitMQ
 {
     public static class ServiceCollectionExtensions
     {

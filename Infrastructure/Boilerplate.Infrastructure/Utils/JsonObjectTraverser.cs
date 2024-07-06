@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace InvoiceFetcher.Infrastructure.Utils
+namespace Boilerplate.Infrastructure.Utils
 {
     public static class JsonObjectTraverser
     {

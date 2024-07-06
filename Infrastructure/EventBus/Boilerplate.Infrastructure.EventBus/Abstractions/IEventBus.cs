@@ -1,6 +1,6 @@
-﻿using InvoiceFetcher.Infrastructure.EventBus.Events;
+﻿using Boilerplate.Infrastructure.EventBus.Events;
 
-namespace InvoiceFetcher.Infrastructure.EventBus.Abstractions
+namespace Boilerplate.Infrastructure.EventBus.Abstractions
 {
     public interface IEventBus
     {

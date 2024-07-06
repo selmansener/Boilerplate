@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.Json.Serialization;
 
-namespace InvoiceFetcher.Infrastructure.EventBus.Events
+namespace Boilerplate.Infrastructure.EventBus.Events
 {
     public abstract class BaseEvent
     {

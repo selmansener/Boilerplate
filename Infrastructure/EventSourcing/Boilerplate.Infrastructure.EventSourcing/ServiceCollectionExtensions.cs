@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InvoiceFetcher.Infrastructure.EventSourcing
+namespace Boilerplate.Infrastructure.EventSourcing
 {
     public static class ServiceCollectionExtensions
     {

@@ -1,17 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore;
-using InvoiceFetcher.Domains.Base;
+using Boilerplate.Domains.Base;
 using Microsoft.EntityFrameworkCore.Metadata;
-using InvoiceFetcher.Domains.InvoiceDomain;
-using InvoiceFetcher.Domains.AccountDomain;
-using InvoiceFetcher.Domains.DocumentDomain;
-using InvoiceFetcher.Infrastructure.EventSourcing;
+using Boilerplate.Domains.InvoiceDomain;
+using Boilerplate.Domains.AccountDomain;
+using Boilerplate.Domains.DocumentDomain;
+using Boilerplate.Infrastructure.EventSourcing;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Data.Common;
 
-namespace InvoiceFetcher.DataAccess
+namespace Boilerplate.DataAccess
 {
-    internal class InvoiceFetcherDbContext : DbContext
+    internal class BoilerplateDbContext : DbContext
     {
         private readonly IEnumerable<EntityState> _trackedStates = new List<EntityState>
         {
@@ -28,7 +28,7 @@ namespace InvoiceFetcher.DataAccess
             { EntityState.Deleted, Deleted  }
         };
 
-        public InvoiceFetcherDbContext(DbContextOptions<InvoiceFetcherDbContext> options)
+        public BoilerplateDbContext(DbContextOptions<BoilerplateDbContext> options)
             : base(options)
         {
             ChangeTracker.LazyLoadingEnabled = false;
@@ -176,7 +176,7 @@ namespace InvoiceFetcher.DataAccess
     {
         public override int SavedChanges(SaveChangesCompletedEventData eventData, int result)
         {
-            if (eventData.Context is InvoiceFetcherDbContext dbContext)
+            if (eventData.Context is BoilerplateDbContext dbContext)
             {
                 dbContext.EventSourceContext.InsertEvents(dbContext.EventCollection);
             }
@@ -186,7 +186,7 @@ namespace InvoiceFetcher.DataAccess
 
         public override ValueTask<int> SavedChangesAsync(SaveChangesCompletedEventData eventData, int result, CancellationToken cancellationToken = default)
         {
-            if (eventData.Context is InvoiceFetcherDbContext dbContext)
+            if (eventData.Context is BoilerplateDbContext dbContext)
             {
                 dbContext.EventSourceContext.InsertEvents(dbContext.EventCollection);
             }

@@ -1,7 +1,7 @@
-﻿using InvoiceFetcher.Infrastructure.EventBus.Events;
+﻿using Boilerplate.Infrastructure.EventBus.Events;
 using System.Threading.Tasks;
 
-namespace InvoiceFetcher.Infrastructure.EventBus.Abstractions
+namespace Boilerplate.Infrastructure.EventBus.Abstractions
 {
     public interface IEventHandler<in TIntegrationEvent> : IEventHandler
         where TIntegrationEvent : BaseEvent

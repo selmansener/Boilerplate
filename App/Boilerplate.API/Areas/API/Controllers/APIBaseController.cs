@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace InvoiceFetcher.API.Areas.API.Controllers
+namespace Boilerplate.API.Areas.API.Controllers
 {
     [ApiController]
     [Area("api")]

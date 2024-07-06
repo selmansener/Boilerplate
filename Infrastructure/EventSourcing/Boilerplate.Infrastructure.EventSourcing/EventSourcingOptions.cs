@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InvoiceFetcher.Infrastructure.EventSourcing
+namespace Boilerplate.Infrastructure.EventSourcing
 {
     public class EventSourcingOptions
     {

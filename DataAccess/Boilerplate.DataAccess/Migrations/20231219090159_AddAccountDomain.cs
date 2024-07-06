@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace InvoiceFetcher.DataAccess.Migrations
+namespace Boilerplate.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddAccountDomain : Migration

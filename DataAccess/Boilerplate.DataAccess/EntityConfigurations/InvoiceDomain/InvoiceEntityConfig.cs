@@ -1,9 +1,9 @@
-﻿using InvoiceFetcher.Domains.InvoiceDomain;
+﻿using Boilerplate.Domains.InvoiceDomain;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace InvoiceFetcher.DataAccess.EntityConfigurations.InvoiceDomain
+namespace Boilerplate.DataAccess.EntityConfigurations.InvoiceDomain
 {
     internal class InvoiceEntityConfig : BaseEntityConfiguration<Invoice>
     {

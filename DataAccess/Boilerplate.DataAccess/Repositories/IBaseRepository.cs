@@ -1,10 +1,10 @@
 ﻿using System.Runtime.CompilerServices;
 
-using InvoiceFetcher.Domains.Base;
+using Boilerplate.Domains.Base;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceFetcher.DataAccess.Repositories
+namespace Boilerplate.DataAccess.Repositories
 {
     public interface IBaseRepository<TEntity>
         where TEntity : BaseEntity
@@ -24,9 +24,9 @@ namespace InvoiceFetcher.DataAccess.Repositories
     internal class BaseRepository<TEntity> : IBaseRepository<TEntity>
         where TEntity : BaseEntity
     {
-        protected readonly InvoiceFetcherDbContext _baseDb;
+        protected readonly BoilerplateDbContext _baseDb;
 
-        public BaseRepository(InvoiceFetcherDbContext baseDb)
+        public BaseRepository(BoilerplateDbContext baseDb)
         {
             _baseDb = baseDb;
         }

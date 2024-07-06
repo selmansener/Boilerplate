@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dee9ab89-f12c-4087-847a-8104d02b0ddc</UserSecretsId>
@@ -34,11 +34,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Business\InvoiceFetcher.Business\Boilerplate.Business.csproj" />
-    <ProjectReference Include="..\..\DataAccess\InvoiceFetcher.DataAccess\Boilerplate.DataAccess.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\EventBus\InvoiceFetcher.Infrastructure.EventBusRabbitMQ\Boilerplate.Infrastructure.EventBusRabbitMQ.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\InvoiceFetcher.Infrastructure\Boilerplate.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\InvoiceFetcher.Shared\Boilerplate.Shared.csproj" />
+    <ProjectReference Include="..\..\Business\Boilerplate.Business\Boilerplate.Business.csproj" />
+    <ProjectReference Include="..\..\DataAccess\Boilerplate.DataAccess\Boilerplate.DataAccess.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\EventBus\Boilerplate.Infrastructure.EventBusRabbitMQ\Boilerplate.Infrastructure.EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Boilerplate.Infrastructure\Boilerplate.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Boilerplate.Shared\Boilerplate.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,14 +3,14 @@
 using DynamicQueryBuilder;
 using DynamicQueryBuilder.Models;
 
-using InvoiceFetcher.Business.CQRS.InvoiceDomain.Commands;
-using InvoiceFetcher.Business.CQRS.InvoiceDomain.Queries;
+using Boilerplate.Business.CQRS.InvoiceDomain.Commands;
+using Boilerplate.Business.CQRS.InvoiceDomain.Queries;
 
 using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace InvoiceFetcher.API.Areas.API.Controllers
+namespace Boilerplate.API.Areas.API.Controllers
 {
     public class InvoiceController : APIBaseController
     {

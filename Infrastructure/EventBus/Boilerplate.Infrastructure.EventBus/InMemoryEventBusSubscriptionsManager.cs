@@ -1,10 +1,10 @@
-﻿using InvoiceFetcher.Infrastructure.EventBus.Abstractions;
-using InvoiceFetcher.Infrastructure.EventBus.Events;
+﻿using Boilerplate.Infrastructure.EventBus.Abstractions;
+using Boilerplate.Infrastructure.EventBus.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace InvoiceFetcher.Infrastructure.EventBus
+namespace Boilerplate.Infrastructure.EventBus
 {
     public class InMemoryEventBusSubscriptionsManager : IEventBusSubscriptionsManager
     {

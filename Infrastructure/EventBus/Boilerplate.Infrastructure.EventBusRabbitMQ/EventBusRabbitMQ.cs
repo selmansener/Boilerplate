@@ -1,7 +1,7 @@
-﻿using InvoiceFetcher.Infrastructure.EventBus;
-using InvoiceFetcher.Infrastructure.EventBus.Abstractions;
-using InvoiceFetcher.Infrastructure.EventBus.Events;
-using InvoiceFetcher.Infrastructure.EventBus.Extensions;
+﻿using Boilerplate.Infrastructure.EventBus;
+using Boilerplate.Infrastructure.EventBus.Abstractions;
+using Boilerplate.Infrastructure.EventBus.Events;
+using Boilerplate.Infrastructure.EventBus.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Polly;
@@ -15,7 +15,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace InvoiceFetcher.Infrastructure.EventBusRabbitMQ
+namespace Boilerplate.Infrastructure.EventBusRabbitMQ
 {
     public class EventBusRabbitMQ : IEventBus, IDisposable
     {

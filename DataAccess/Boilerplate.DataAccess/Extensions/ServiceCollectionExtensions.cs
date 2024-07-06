@@ -1,14 +1,14 @@
-﻿using InvoiceFetcher.DataAccess.Development;
-using InvoiceFetcher.DataAccess.Repositories;
-using InvoiceFetcher.DataAccess.Transactions;
-using InvoiceFetcher.Infrastructure.EventSourcing;
+﻿using Boilerplate.DataAccess.Development;
+using Boilerplate.DataAccess.Repositories;
+using Boilerplate.DataAccess.Transactions;
+using Boilerplate.Infrastructure.EventSourcing;
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace InvoiceFetcher.DataAccess.Extensions
+namespace Boilerplate.DataAccess.Extensions
 {
     public static class ServiceCollectionExtensions
     {
@@ -28,7 +28,7 @@ namespace InvoiceFetcher.DataAccess.Extensions
                 CertificateFingerprint = "969A4D81BE12F58F7F0E3CA2765FEC246DD8F00280AFAF0AD6C5D85544242A57"
             });
 
-            services.AddPooledDbContextFactory<InvoiceFetcherDbContext>(options =>
+            services.AddPooledDbContextFactory<BoilerplateDbContext>(options =>
             {
                 options.UseSqlServer(connectionString, sqlOptions =>
                 {
@@ -36,9 +36,9 @@ namespace InvoiceFetcher.DataAccess.Extensions
                 });
                 options.AddInterceptors(new EventTrackingSaveChangesInterceptor());
             });
-            services.AddScoped<InvoiceFetcherDbContextFactory>();
+            services.AddScoped<BoilerplateDbContextFactory>();
             services.AddScoped(
-                sp => sp.GetRequiredService<InvoiceFetcherDbContextFactory>().CreateDbContext());
+                sp => sp.GetRequiredService<BoilerplateDbContextFactory>().CreateDbContext());
 
             services.AddScoped<IMigrationContext>(sp =>
             {
@@ -49,7 +49,7 @@ namespace InvoiceFetcher.DataAccess.Extensions
                     return null;
                 }
 
-                var dbContext = sp.GetRequiredService<InvoiceFetcherDbContext>();
+                var dbContext = sp.GetRequiredService<BoilerplateDbContext>();
 
                 return new MigrationContext(dbContext);
             });

@@ -3,7 +3,7 @@ using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Logging;
 
-namespace InvoiceFetcher.Business.PipelineBehaviors
+namespace Boilerplate.Business.PipelineBehaviors
 {
     internal class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>

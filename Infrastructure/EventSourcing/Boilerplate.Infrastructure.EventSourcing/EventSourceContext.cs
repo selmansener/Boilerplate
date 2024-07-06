@@ -1,7 +1,7 @@
 ﻿using Elastic.Clients.Elasticsearch;
 using Elastic.Transport;
 
-namespace InvoiceFetcher.Infrastructure.EventSourcing
+namespace Boilerplate.Infrastructure.EventSourcing
 {
     public interface IEventSourceContext
     {
@@ -10,7 +10,7 @@ namespace InvoiceFetcher.Infrastructure.EventSourcing
 
     internal class EventSourceContext : IEventSourceContext
     {
-        // TODO: consider moving elastic client to InvoiceFetcher.Infrastructure.EventSourcing.Elasticsearch
+        // TODO: consider moving elastic client to Boilerplate.Infrastructure.EventSourcing.Elasticsearch
         private readonly ElasticsearchClient _elasticsearchClient;
 
         public EventSourceContext(EventSourcingOptions eventSourcingOptions)

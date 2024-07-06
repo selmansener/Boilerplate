@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceFetcher.DataAccess.Development
+namespace Boilerplate.DataAccess.Development
 {
     public interface IMigrationContext
     {
@@ -19,9 +19,9 @@ namespace InvoiceFetcher.DataAccess.Development
 
     internal class MigrationContext : IMigrationContext
     {
-        private readonly InvoiceFetcherDbContext _context;
+        private readonly BoilerplateDbContext _context;
 
-        public MigrationContext(InvoiceFetcherDbContext context)
+        public MigrationContext(BoilerplateDbContext context)
         {
             _context = context;
         }

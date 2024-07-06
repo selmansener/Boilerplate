@@ -1,11 +1,11 @@
-﻿using InvoiceFetcher.Infrastructure.EventBus.Abstractions;
-using InvoiceFetcher.Infrastructure.EventBus.Events;
+﻿using Boilerplate.Infrastructure.EventBus.Abstractions;
+using Boilerplate.Infrastructure.EventBus.Events;
 
 using Microsoft.Extensions.Logging;
 
 using Newtonsoft.Json;
 
-namespace InvoiceFetcher.Business.Events
+namespace Boilerplate.Business.Events
 {
     public class InvoiceCreatedEvent : BaseEvent
     {

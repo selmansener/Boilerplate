@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace InvoiceFetcher.Infrastructure.EventBus.Abstractions
+namespace Boilerplate.Infrastructure.EventBus.Abstractions
 {
     public interface IDynamicIntegrationEventHandler
     {

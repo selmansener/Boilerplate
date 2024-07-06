@@ -1,13 +1,13 @@
 
 using FluentValidation;
 
-using InvoiceFetcher.API.Areas.Dev.Controllers;
-using InvoiceFetcher.API.Middlewares;
-using InvoiceFetcher.DataAccess.Extensions;
-using InvoiceFetcher.Business.Extensions;
-using InvoiceFetcher.Infrastructure.EventBusRabbitMQ;
-using InvoiceFetcher.Infrastructure.EventBus.Abstractions;
-using InvoiceFetcher.Business.Events;
+using Boilerplate.API.Areas.Dev.Controllers;
+using Boilerplate.API.Middlewares;
+using Boilerplate.DataAccess.Extensions;
+using Boilerplate.Business.Extensions;
+using Boilerplate.Infrastructure.EventBusRabbitMQ;
+using Boilerplate.Infrastructure.EventBus.Abstractions;
+using Boilerplate.Business.Events;
 using Elastic.Apm.AspNetCore;
 using Elastic.Apm.DiagnosticSource;
 using Elastic.Apm.EntityFrameworkCore;
@@ -17,15 +17,15 @@ using System.Reflection;
 using Elastic.Apm.SerilogEnricher;
 using Elastic.CommonSchema.Serilog;
 using Prometheus;
-using InvoiceFetcher.API.HealthCheck;
+using Boilerplate.API.HealthCheck;
 using Serilog.Events;
 using Serilog.Enrichers.Sensitive;
-using InvoiceFetcher.API.Helpers;
-using InvoiceFetcher.API.Filters;
+using Boilerplate.API.Helpers;
+using Boilerplate.API.Filters;
 using Microsoft.Extensions.Options;
-using InvoiceFetcher.Shared.Interfaces;
+using Boilerplate.Shared.Interfaces;
 
-namespace InvoiceFetcher.API
+namespace Boilerplate.API
 {
     public class Program
     {
@@ -130,7 +130,7 @@ namespace InvoiceFetcher.API
 
             builder.Services.AddScoped<ITenant, TenantProvider>();
 
-            builder.Services.AddDataAccess("Server=localhost;Database=InvoiceFetcher;User Id=sa;Password=qwe123**;Encrypt=False;TrustServerCertificate=True;");
+            builder.Services.AddDataAccess("Server=localhost;Database=Boilerplate;User Id=sa;Password=qwe123**;Encrypt=False;TrustServerCertificate=True;");
 
             var app = builder.Build();
 

@@ -1,8 +1,8 @@
-﻿using InvoiceFetcher.Shared.Interfaces;
+﻿using Boilerplate.Shared.Interfaces;
 
 using Microsoft.Extensions.Primitives;
 
-namespace InvoiceFetcher.API.Helpers
+namespace Boilerplate.API.Helpers
 {
     public class TenantProvider : ITenant
     {

@@ -1,10 +1,10 @@
 ﻿using DynamicQueryBuilder;
 using DynamicQueryBuilder.Models;
 
-using InvoiceFetcher.Business.CQRS.InvoiceDomain.DTOs;
-using InvoiceFetcher.Business.DTOs;
-using InvoiceFetcher.DataAccess.Repositories;
-using InvoiceFetcher.Domains.InvoiceDomain;
+using Boilerplate.Business.CQRS.InvoiceDomain.DTOs;
+using Boilerplate.Business.DTOs;
+using Boilerplate.DataAccess.Repositories;
+using Boilerplate.Domains.InvoiceDomain;
 
 using Mapster;
 
@@ -12,7 +12,7 @@ using MediatR;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace InvoiceFetcher.Business.CQRS.InvoiceDomain.Queries
+namespace Boilerplate.Business.CQRS.InvoiceDomain.Queries
 {
     public class QueryInvoices : IRequest<DQBResultDTO<InvoiceDTO>>
     {

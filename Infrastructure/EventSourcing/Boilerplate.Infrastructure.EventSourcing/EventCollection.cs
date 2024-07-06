@@ -1,4 +1,4 @@
-﻿namespace InvoiceFetcher.Infrastructure.EventSourcing
+﻿namespace Boilerplate.Infrastructure.EventSourcing
 {
     public sealed class EventCollection : Queue<EventBase>
     {

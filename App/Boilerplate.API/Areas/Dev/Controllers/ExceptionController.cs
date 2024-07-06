@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-using InvoiceFetcher.Shared.Exceptions;
+using Boilerplate.Shared.Exceptions;
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace InvoiceFetcher.API.Areas.Dev.Controllers
+namespace Boilerplate.API.Areas.Dev.Controllers
 {
     public class ExceptionController : DevAPIBaseController
     {

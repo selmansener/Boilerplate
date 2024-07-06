@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InvoiceFetcher.Infrastructure.EventBusRabbitMQ
+namespace Boilerplate.Infrastructure.EventBusRabbitMQ
 {
     public class EventBusConfig
     {

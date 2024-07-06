@@ -1,4 +1,4 @@
-﻿namespace InvoiceFetcher.Domains.Base
+﻿namespace Boilerplate.Domains.Base
 {
     public interface IBaseEntity { }
     public abstract class BaseEntity : IBaseEntity
