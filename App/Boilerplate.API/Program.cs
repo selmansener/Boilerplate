@@ -50,25 +50,25 @@ namespace Boilerplate.API
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .Enrich.WithMachineName()
-                .Enrich.WithSensitiveDataMasking(opt =>
-                {
-                    opt.Mode = MaskingMode.Globally;
+                //.Enrich.WithSensitiveDataMasking(opt =>
+                //{
+                //    opt.Mode = MaskingMode.Globally;
 
-                    var sensitiveDataMasking = builder.Configuration.GetSection("SensitiveDataMasking").Get<string[]>();
+                //    var sensitiveDataMasking = builder.Configuration.GetSection("SensitiveDataMasking").Get<string[]>();
 
-                    if (sensitiveDataMasking == null)
-                    {
-                        // ignore rest
-                        return;
-                    }
+                //    if (sensitiveDataMasking == null)
+                //    {
+                //        // ignore rest
+                //        return;
+                //    }
 
-                    foreach (var maskProperty in sensitiveDataMasking)
-                    {
-                        opt.MaskProperties.Add(maskProperty);
-                    }
+                //    foreach (var maskProperty in sensitiveDataMasking)
+                //    {
+                //        opt.MaskProperties.Add(maskProperty);
+                //    }
 
-                    opt.MaskingOperators.Add(new JsonMaskingOperator(sensitiveDataMasking));
-                })
+                //    opt.MaskingOperators.Add(new JsonMaskingOperator(sensitiveDataMasking));
+                //})
                 .WriteTo.Debug()
                     .WriteTo.Console()
                 .Enrich.WithElasticApmCorrelationInfo()
@@ -130,7 +130,7 @@ namespace Boilerplate.API
 
             builder.Services.AddScoped<ITenant, TenantProvider>();
 
-            builder.Services.AddDataAccess("Server=localhost;Database=Boilerplate;User Id=sa;Password=qwe123**;Encrypt=False;TrustServerCertificate=True;");
+            builder.Services.AddDataAccess("Server=localhost;Database=Boilerplate;User Id=boilerplate-sa;Password=boilerplate123**;Encrypt=False;TrustServerCertificate=True;");
 
             var app = builder.Build();
 
@@ -182,8 +182,19 @@ namespace Boilerplate.API
             {
                 AutoRegisterTemplate = true,
                 IndexFormat = indexFormat,
-                ModifyConnectionSettings = x => x.BasicAuthentication("elastic", "qwe123**"),
-                CustomFormatter = new EcsTextFormatter()
+                // ModifyConnectionSettings = x => x.BasicAuthentication("elastic", "qwe123**"),
+                ModifyConnectionSettings = x =>
+                {
+                    var connection = x.ApiKeyAuthentication("P2cSkZABnEF_aaqZ17rf", "_UbklzSYRZiC1PBcP663VQ");
+                    connection.ServerCertificateValidationCallback((x, y, z, a) =>
+                    {
+                        return true;
+                    });
+
+                    return connection;
+                },
+                CustomFormatter = new EcsTextFormatter(),
+
             };
         }
     }
