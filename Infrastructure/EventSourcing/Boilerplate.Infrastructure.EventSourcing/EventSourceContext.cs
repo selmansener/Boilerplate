@@ -23,6 +23,12 @@ namespace Boilerplate.Infrastructure.EventSourcing
                 // TODO: consider time format for index name
                 .DefaultMappingFor<EventBase>(i => i.IndexName("event-sourcing"));
 
+            // TODO: Don't forget to check environment, tis is just for the development environment
+            settings.ServerCertificateValidationCallback((x, z, y, a) =>
+            {
+                return true;
+            });
+
             // TODO: consider scoped or singleton elasticsearch client?
             _elasticsearchClient = new ElasticsearchClient(settings);
         }

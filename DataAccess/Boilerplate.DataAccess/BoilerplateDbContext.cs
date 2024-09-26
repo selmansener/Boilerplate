@@ -164,7 +164,14 @@ namespace Boilerplate.DataAccess
 
                 foreach (var propertyEntry in entry.Properties)
                 {
-                    @event.AddField(propertyEntry.Metadata.Name, propertyEntry.CurrentValue);
+                    if (entry.State == EntityState.Added)
+                    {
+                        @event.AddField(propertyEntry.Metadata.Name, propertyEntry.CurrentValue);
+                    }
+                    else
+                    {
+                        @event.AddField(propertyEntry.Metadata.Name, propertyEntry.CurrentValue, propertyEntry.OriginalValue);
+                    }
                 }
 
                 EventCollection.Enqueue(@event);

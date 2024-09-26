@@ -13,6 +13,7 @@ using Mapster;
 using MediatR;
 
 using Microsoft.EntityFrameworkCore;
+using Boilerplate.Domains.DocumentDomain;
 
 namespace Boilerplate.Business.CQRS.InvoiceDomain.Commands
 {
@@ -64,6 +65,8 @@ namespace Boilerplate.Business.CQRS.InvoiceDomain.Commands
             }
 
             var invoice = new Invoice(request.ExternalId, request.CompanyIdentifier, request.ExternalCreatedAt);
+
+            invoice.AddDocument(new Document("someName", "someUrl", Shared.Enums.DocumentType.Invoice));
 
             await _invoiceRepository.AddAsync(invoice, cancellationToken, saveChanges: true);
 

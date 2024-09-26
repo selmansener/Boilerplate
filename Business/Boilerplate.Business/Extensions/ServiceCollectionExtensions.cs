@@ -31,7 +31,7 @@ namespace Boilerplate.Business.Extensions
                 UsesCaseInsensitiveSource = true
             });
             // TODO: Denenicek
-            services.AddTransient<IPipelineBehavior<CreateInvoiceCommand, Unit>, ResilienceBehavior<CreateInvoiceCommand, Unit>>();
+            services.AddTransient<IPipelineBehavior<CreateInvoiceCommand, Unit>, TransientHttpErrorsResilienceBehavior<CreateInvoiceCommand, Unit>>();
 
             TypeAdapterConfig.GlobalSettings.Scan(typeof(ServiceCollectionExtensions).Assembly);
             TypeAdapterConfig.GlobalSettings.Default.IgnoreNullValues(true);

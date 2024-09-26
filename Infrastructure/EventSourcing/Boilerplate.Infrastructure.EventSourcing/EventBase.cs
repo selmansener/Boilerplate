@@ -10,7 +10,8 @@ namespace Boilerplate.Infrastructure.EventSourcing
             EventSource = eventSource;
             EventName = eventName;
             Timestamp = DateTime.UtcNow;
-            Data = new Dictionary<string, object?>();
+            CurrentData = new Dictionary<string, object?>();
+            OrijinalData = new Dictionary<string, object?>();
         }
 
         public Guid EventId { get; private set; }
@@ -19,20 +20,31 @@ namespace Boilerplate.Infrastructure.EventSourcing
 
         public string EventName { get; protected set; }
 
-        public Dictionary<string, object?> Data { get; private set; }
+        public Dictionary<string, object?> OrijinalData { get; private set; }
+
+        public Dictionary<string, object?> CurrentData { get; private set; }
 
         [JsonPropertyName("@timestamp")]
         public DateTime Timestamp { get; private set; }
 
-        public void AddField(string key,  object? value)
+        public void AddField(string key, object? currentValue)
         {
-            if (Data.ContainsKey(key))
+            AddField(key, currentValue, null);
+        }
+
+        public void AddField(string key,  object? currentValue, object? originalValue)
+        {
+            if (CurrentData.ContainsKey(key) || OrijinalData.ContainsKey(key))
             {
                 // TODO: should we throw?
                 return;
             }
 
-            Data.Add(key, value);
+            CurrentData.Add(key, currentValue);
+            if (originalValue != null)
+            {
+                OrijinalData.Add(key, originalValue);
+            }
         }
     }
 }

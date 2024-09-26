@@ -185,7 +185,9 @@ namespace Boilerplate.API
                 // ModifyConnectionSettings = x => x.BasicAuthentication("elastic", "qwe123**"),
                 ModifyConnectionSettings = x =>
                 {
-                    var connection = x.ApiKeyAuthentication("P2cSkZABnEF_aaqZ17rf", "_UbklzSYRZiC1PBcP663VQ");
+                    //cwIqLpIBQkHAMQAxnsX5:1H07wzV5T3SLfwk8BI8N0A
+                    //var connection = x.ApiKeyAuthentication("P2cSkZABnEF_aaqZ17rf", "_UbklzSYRZiC1PBcP663VQ");
+                    var connection = x.ApiKeyAuthentication("cwIqLpIBQkHAMQAxnsX5", "1H07wzV5T3SLfwk8BI8N0A");
                     connection.ServerCertificateValidationCallback((x, y, z, a) =>
                     {
                         return true;
